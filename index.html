@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&family=Dancing+Script&family=Cinzel&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Great Vibes', cursive;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    .title {
+      font-size: 40px;
+      color: black;
+      margin-top: 50px;
+      animation: fadeInTitle 2s forwards;
+    }
+
+    .message-box {
+      width: 90%;
+      padding: 30px;
+      margin-top: 50px;
+      background-color: #f5f5f5;
+      border: 2px solid black;
+      border-radius: 15px;
+      font-size: 25px;
+      display: inline-block;
+      opacity: 0;
+      animation: messageAnimation 5s forwards;
+      white-space: nowrap;
+      overflow: hidden;
+      line-height: 1.5;
+    }
+
+    .message-box span {
+      display: inline-block;
+      animation: typing 4s steps(60) 1s forwards;
+    }
+
+    .text-block {
+      margin-top: 30px;
+      font-size: 36px;
+      color: black;
+      opacity: 0;
+      animation: fadeInText 4s forwards;
+      margin-bottom: 50px;
+    }
+
+    .pink-page {
+      background-color: pink;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 50px;
+      color: black;
+      opacity: 0;
+      animation: fadeInPink 3s forwards;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .purple-page {
+      background-color: #fef6f6;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 50px;
+      color: black;
+      opacity: 0;
+      animation: fadeInPurple 3s forwards;
+      text-align: center;
+      padding: 20px;
+      font-family: 'Dancing Script', cursive;
+      line-height: 1.5;
+    }
+
+    .dedication-page {
+      background-color: pink;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      color: #4B0082;
+      opacity: 0;
+      animation: fadeInPurple 3s forwards;
+      text-align: center;
+      padding: 30px;
+      font-family: 'Cinzel', serif;
+      line-height: 1.5;
+    }
+
+    .last-page {
+      background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      color: black;
+      opacity: 0;
+      animation: fadeInLastPage 3s forwards;
+      text-align: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeInTitle {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes messageAnimation {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes fadeInText {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeInPink {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeInPurple {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeInLastPage {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- First Page: "Page dedicated to Pasandida Aurat" -->
+  <div class="container" id="titlePage">
+    <div class="title">
+      Page dedicated to my Pasandida Aurat ❤
+    </div>
+  </div>
+
+  <!-- Second Page: Writing Animation -->
+  <div class="container hidden" id="messagePage">
+    <div class="message-box">
+      <span>Happy Birthday sundar aloo 😘</span>
+    </div>
+  </div>
+
+  <!-- Third Page: Text Fade In -->
+  <div class="container hidden" id="textPage">
+    <div class="text-block">
+      <p>I was going to do that but I stopped.</p>
+      <p>Because you're spl :)</p>
+    </div>
+  </div>
+
+  <!-- Fourth Page: Pink Background -->
+  <div class="container hidden" id="pinkPage">
+    <div class="pink-page">
+      I thought of something different...
+    </div>
+  </div>
+
+  <!-- Fifth Page: Black Text in Cinzel Font (no animation) -->
+  <div class="container hidden" id="purplePage">
+    <div class="purple-page" style="font-family: 'Cinzel', serif; color: black;">
+      TO MY <br><br>
+      SUNDAR ALOO 😘 <br><br>
+      PASANDIDA AURAT 🎀 <br> CHEBYSHEV TYPE 1 HPF <br> PWM MODULATOR
+    </div>
+  </div>
+
+  <!-- Sixth Page: Deep Purple Text in Cinzel Font -->
+  <div class="container hidden" id="dedicationPage">
+    <div class="dedication-page">
+      TO -<br><br>
+      THE MOST BEAUTIFUL GIRL I'VE EVER SEEN <br><br>
+      THE MS DHONI OF ACADEMICS <br> (AKHIR M BOUNDARY MARKE TOP KRNA)<br><br>
+      THE MOST SWEETEST GIRL.
+    </div>
+  </div>
+
+  <!-- Seventh Page: New "Happy Birthday!" Page -->
+  <div class="container hidden" id="birthdayPage">
+    <div class="pink-page">
+      <strong>I   wish you a<br> Very Very <br> Happy Birthday!</strong>
+    </div>
+  </div>
+
+  <!-- Eighth Page: New Arial Font Page -->
+  <!-- Eighth Page: New Pink Background with Beautiful Font -->
+<div class="container hidden" id="lastPage">
+  <div class="last-page" style="background-color: pink; font-family: 'Dancing Script', cursive;">
+    <p>On your special day, I just want to say,</p>
+    <p>You're a treasure, in every single way.</p>
+    <p>May your dreams come true, your heart be light,</p>
+    <p>And may your future always shine bright.</p>
+    <p>So, may I ask will you be mine?🗿</p>
+  </div>
+  </div>
+  <script>
+    setTimeout(function () {
+      document.getElementById("titlePage").style.display = "none";
+      document.getElementById("messagePage").classList.remove("hidden");
+      document.getElementById("messagePage").style.display = "block";
+    }, 2000);
+
+    setTimeout(function () {
+      document.getElementById("messagePage").style.display = "none";
+      document.getElementById("textPage").classList.remove("hidden");
+      document.getElementById("textPage").style.display = "block";
+    }, 7000);
+
+    setTimeout(function () {
+      document.getElementById("textPage").style.display = "none";
+      document.getElementById("pinkPage").classList.remove("hidden");
+      document.getElementById("pinkPage").style.display = "block";
+    }, 13000);
+
+    setTimeout(function () {
+      document.getElementById("pinkPage").style.display = "none";
+      document.getElementById("purplePage").classList.remove("hidden");
+      document.getElementById("purplePage").style.display = "block";
+    }, 17000);
+
+    setTimeout(function () {
+      document.getElementById("purplePage").style.display = "none";
+      document.getElementById("dedicationPage").classList.remove("hidden");
+      document.getElementById("dedicationPage").style.display = "block";
+    }, 22000);
+
+    setTimeout(function () {
+      document.getElementById("dedicationPage").style.display = "none";
+      document.getElementById("birthdayPage").classList.remove("hidden");
+      document.getElementById("birthdayPage").style.display = "block";
+    }, 27000);
+
+    setTimeout(function () {
+      document.getElementById("birthdayPage").style.display = "none";
+      document.getElementById("lastPage").classList.remove("hidden");
+      document.getElementById("lastPage").style.display = "block";
+    }, 32000);
+  </script>
+</body>
+</html>
